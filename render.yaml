@@ -1,21 +1,15 @@
-# Exported from Render on 2025-07-09T09:18:01Z
 services:
-- type: web
-  name: TheMovieProviderBottt
-  runtime: python
-  repo: https://github.com/Ramabbaddie/TheMovieProviderBottt
-  plan: free
-  envVars:
-  - key: LOG_CHANNEL
-    sync: false
-  - key: ADMINS
-    sync: false
-  - key: MONGO_DB_URI
-    sync: false
-  - key: BOT_TOKEN
-    sync: false
-  region: oregon
-  buildCommand: pip install -r requirements.txt
-  startCommand: python3 bot.py
-  autoDeployTrigger: "off"
-version: "1"
+  # A Docker web service
+  - type: web
+    name: TheMovieProviderBot
+    env: python
+    startCommand: python3 bot.py
+    buildCommand: pip3 install -U -r requirements.txt
+    repo: https://github.com/HarshalPurohitEdits/TheMovieProviderBot.git # optional
+    region: oregon # optional (defaults to oregon)
+    plan: free # optional (defaults to starter)
+    branch: main # optional (defaults to master)
+    numInstances: 1 # optional (defaults to 1)
+    healthCheckPath: /
+
+#End of yaml

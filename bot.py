@@ -5,13 +5,10 @@ import importlib
 from pathlib import Path
 from pyrogram import idle
 import logging
-import logging
+import logging.config
 
 # Get logging configurations
-import logging
-logging.basicConfig(level=logging.INFO)
-
-
+logging.config.fileConfig('logging.conf')
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
 logging.getLogger("imdbpy").setLevel(logging.ERROR)
