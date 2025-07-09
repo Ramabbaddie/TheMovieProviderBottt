@@ -5,11 +5,12 @@ import importlib
 from pathlib import Path
 from pyrogram import idle
 import logging
-import logging.INFO
+import logging
 
 # Get logging configurations
 import logging
 logging.basicConfig(level=logging.INFO)
+
 
 logging.getLogger().setLevel(logging.INFO)
 logging.getLogger("pyrogram").setLevel(logging.ERROR)
