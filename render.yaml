@@ -1,0 +1,21 @@
+# Exported from Render on 2025-07-09T09:18:01Z
+services:
+- type: web
+  name: TheMovieProviderBottt
+  runtime: python
+  repo: https://github.com/Ramabbaddie/TheMovieProviderBottt
+  plan: free
+  envVars:
+  - key: LOG_CHANNEL
+    sync: false
+  - key: ADMINS
+    sync: false
+  - key: MONGO_DB_URI
+    sync: false
+  - key: BOT_TOKEN
+    sync: false
+  region: oregon
+  buildCommand: pip install -r requirements.txt
+  startCommand: python3 bot.py
+  autoDeployTrigger: "off"
+version: "1"
