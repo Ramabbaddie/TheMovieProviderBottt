@@ -31,8 +31,7 @@ numpy
 wheel
 python-decouple
 
-# External dependency from GitHub
-git+https://github.com/Joelkb/cinemagoer.git
+
 
 
 
