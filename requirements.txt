@@ -1,4 +1,3 @@
-# Core Dependencies
 pyrogram>=2.0.30
 tgcrypto==1.2.5
 pymongo[srv]==3.12.3
@@ -23,17 +22,8 @@ pyshorteners
 pyromod
 colorama
 humanize==4.6.0
-opencv-python-headless==4.7.0.68
 speedtest==0.0.1
 psutil==5.9.4
-Pillow==9.4.0
 numpy
 wheel
 python-decouple
-
-
-
-
-
-
-  
